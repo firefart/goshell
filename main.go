@@ -23,7 +23,7 @@ func main() {
 	if err != nil {
 		log.Fatalf("error on dial: %v", err)
 	}
-	cmd := exec.Command(BINARY)
+	cmd := exec.Command(BINARY, ARGS...)
 	cmd.Stdin = c
 	cmd.Stdout = c
 	cmd.Stderr = c
