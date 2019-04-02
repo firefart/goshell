@@ -6,4 +6,4 @@ package main
 const BINARY = "/bin/bash"
 
 // ARGS defines additional arguments to pass
-var ARGS = []string{}
+var ARGS = []string{"-l", "-i"}
