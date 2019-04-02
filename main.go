@@ -30,14 +30,17 @@ func main() {
 	if err != nil {
 		log.Fatalf("could not get stdin: %v", err)
 	}
+	defer stdin.Close()
 	stdout, err := cmd.StdoutPipe()
 	if err != nil {
 		log.Fatalf("could not get stdout: %v", err)
 	}
+	defer stdout.Close()
 	stderr, err := cmd.StderrPipe()
 	if err != nil {
 		log.Fatalf("could not get stderr: %v", err)
 	}
+	defer stderr.Close()
 	// needed as the process waits until stdin is closed
 	// if we set stdin directly to c, an 'exit' will
 	// not work and wait until the connection is
