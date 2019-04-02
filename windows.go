@@ -6,4 +6,4 @@ package main
 const BINARY = "powershell.exe"
 
 // ARGS defines additional arguments to pass
-var ARGS = []string{"-nop", "-w", "hidden"}
+var ARGS = []string{"-NoProfile", "-WindowStyle", "hidden", "-NoLogo"}
